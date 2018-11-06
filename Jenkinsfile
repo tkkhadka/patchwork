@@ -1,7 +1,7 @@
 node("agent1"){
   def mvnHome = tool name: 'maven360' , type:'maven'
   stage('Checkout'){
-    git credentialsId: 'githubaccount', url: 'https://github.com/tkkhadka/first.git'
+    git credentialsId: 'githubaccount', url: 'https://github.com/tkkhadka/patchwork.git'
 
   }
   stage('Execute Test Case'){
