@@ -1,4 +1,4 @@
-node("agent1"){
+node("master"){
   def mvnHome = tool name: 'mvn360', type: 'maven'
   stage('Checkout'){
     git credentialsId: 'githubaccount', url: 'https://github.com/tkkhadka/patchwork.git'
