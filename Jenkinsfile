@@ -1,5 +1,5 @@
 node("agent1"){
-  def mvnHome = tool name: 'maven360', type: 'maven'
+  def mvnHome = tool name: 'mvn360', type: 'maven'
   stage('Checkout'){
     git credentialsId: 'githubaccount', url: 'https://github.com/tkkhadka/patchwork.git'
 
@@ -14,7 +14,7 @@ node("agent1"){
     sh "${mvnHome}/bin/mvn clean package"
 
   }
-  stage('Pst Build Action'){
+  stage('Post Build Action'){
     echo "Sending an Email to user"
   }
 }
